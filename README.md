@@ -1,6 +1,6 @@
 # Intro_to_C-Scripting
 
-##Author: **Rohan Singh** (rohan.b.singh54@gmail.com)
+## Author: **Rohan Singh** (rohan.b.singh54@gmail.com)
 
 Includes basic C programs, the C programs use **ANSI C** and some system calls, and bash scripts for Linux.
 
