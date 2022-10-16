@@ -1,4 +1,4 @@
-# Intro to C and Shell Scripting
+# Intro to C and Scripting
 
 ## Author: **Rohan Singh** (rohan.b.singh54@gmail.com)
 
