@@ -10,15 +10,17 @@ http://cslabcms.nju.edu.cn/problem_solving/images/c/cc/The_C_Programming_Languag
 
 The prac1 directory contains some slighly more advanced source code like multithreading, shared memory and mutex thread locking etcetera.
 
-The C programs contain (but are not limited to):
-1) File Manipulation
-2) Text Manipulation
-3) Use of basic data types and flow statements
-4) Use of character arrays and strings
-5) Pointers 
-6) Memory allocation/ deallocation
-7) Multitheading
-8) Process Cloning system calls  
+The C basic programs contain (but are not limited to):
+1) File Manipulation (Kernighan-Ritchie Ch: 1)  
+2) Text Manipulation  (Kernighan-Ritchie Ch: 2)
+3) Use of basic data types and flow statements (Kernighan-Ritchie Ch:3)  
+4) Use of character arrays and strings (Kernighan-Ritchie Ch:4)  
+5) Pointers (Kernighan-Ritchie Ch:5)  
+
+The prac1 (slightly more advanced stuff) contains:   
+1) Memory allocation/ deallocation  
+2) Multitheading
+3) Process Cloning system calls (fork and exec)  
 
 The awk scripts include:  
 
