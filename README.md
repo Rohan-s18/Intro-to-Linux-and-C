@@ -1,6 +1,6 @@
 # Intro to Linux and C
 
-## Author: **Rohan Singh** (rohan.b.singh54@gmail.com)
+## Author: **Rohan Singh** 
 
 This repository is divided into three main components, each with a different purpose, depending on what you want to do.
 
