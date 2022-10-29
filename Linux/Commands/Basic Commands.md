@@ -10,4 +10,9 @@ Here's a list of some basic commands:
   - **id**  
   - **echo \<something\>**  
     This command prints out whatever is in the "something", it could be plain string or something returned by a process.  
+  - **history \<num\>**  
+    This command gives us the history of the last "num" commands, the argument num must be an integer.  
+  - **type \<command\>**  
+    This command gives us the location of the the given command (such as date/ps etc).  
+    
    
