@@ -35,9 +35,10 @@ The prac1 (slightly more advanced stuff) contains:
 ## Scripting  
 This section contains scripts that would make your life a lot easier, this includes simple bash and awk scripts.  
 
-The awk scripts include: 
+**The Bash scripts include:**  
+   - Intro to Bash Scripting   
 
-The bash scripts include:
+**The awk scripts include:**  
 
 
 
