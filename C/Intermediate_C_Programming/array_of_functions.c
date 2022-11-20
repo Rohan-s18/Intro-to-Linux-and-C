@@ -12,13 +12,7 @@ int (*operations[5])();
 int (*(*operationptr)[5])();
 
 int main(){
-	printf("Choose your operation:\n-For Addition Press 1\n-For Subtraction Press 2\n-For Multiplication Press 3\n-For Division Press 4\n-For Modulo Press 5\n");
-	int selection;
-	scanf("%d\n",&selection);
-	selection--;	
-
-	printf("Enter 2 integers:\n");
-
+	
 	//Assigning functions to the array of functions
 	operations[0] = add;
 	operations[1] = subtract;
@@ -29,6 +23,11 @@ int main(){
 	//Assigning the pointer to the array of functions
 	operationptr = &operations;
 	
+	printf("Choose your operation:\n-For Addition Press 1\n-For Subtraction Press 2\n-For Multiplication Press 3\n-For Division Press 4\n-For Modulo Press 5\n");
+	int selection;
+	scanf("%d\n",&selection);
+	selection--;	
+
 	//Calling the selected function from the operationptr
 	int result = (*(*operationptr+selection))();
 	
@@ -40,6 +39,7 @@ int main(){
 
 
 int add(){
+	printf("Enter 2 integers:\n");
 	int a;
 	int b;
 	scanf("%d %d",&a,&b);
@@ -47,6 +47,7 @@ int add(){
 }
 
 int subtract(){
+	printf("Enter 2 integers:\n");
         int a;
         int b;
         scanf("%d %d",&a,&b);
@@ -54,6 +55,7 @@ int subtract(){
 }
 
 int multiply(){
+	printf("Enter 2 integers:\n");
         int a;
         int b;
         scanf("%d %d",&a,&b);
@@ -61,6 +63,7 @@ int multiply(){
 }
 
 int divide(){
+	printf("Enter 2 integers:\n");
         int a;
         int b;
         scanf("%d %d",&a,&b);
@@ -68,6 +71,7 @@ int divide(){
 }
 
 int modulo(){
+	printf("Enter 2 integers:\n");
         int a;
         int b;
         scanf("%d %d",&a,&b);
