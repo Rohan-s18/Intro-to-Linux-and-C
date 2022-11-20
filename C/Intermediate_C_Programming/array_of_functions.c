@@ -12,7 +12,6 @@ int (*operations[5])();
 int (*(*operationptr)[5])();
 
 int main(){
-	
 	printf("Choose your operation:\n-For Addition Press 1\n-For Subtraction Press 2\n-For Multiplication Press 3\n-For Division Press 4\n-For Modulo Press 5\n");
 	int selection;
 	scanf("%d\n",&selection);
@@ -31,9 +30,9 @@ int main(){
 	operationptr = &operations;
 	
 	//Calling the selected function from the operationptr
-	result = (*(*operationptr+selection))();
+	int result = (*(*operationptr+selection))();
 	
-	printf("The result of the operation is: %d\n,result);
+	printf("The result of the operation is: %d\n",result);
 	
 	return 0;
 
@@ -41,23 +40,42 @@ int main(){
 
 
 int add(){
-
+	int a;
+	int b;
+	scanf("%d %d",&a,&b);
+	return a + b;
 }
 
 int subtract(){
-
+        int a;
+        int b;
+        scanf("%d %d",&a,&b);
+        return a - b;
 }
 
 int multiply(){
-
+        int a;
+        int b;
+        scanf("%d %d",&a,&b);
+        return a * b;
 }
 
 int divide(){
-
+        int a;
+        int b;
+        scanf("%d %d",&a,&b);
+        return a / b;
 }
 
 int modulo(){
-
+        int a;
+        int b;
+        scanf("%d %d",&a,&b);
+        return a % b;
 }
+
+
+
+
 
 
