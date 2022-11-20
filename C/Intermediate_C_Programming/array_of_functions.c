@@ -29,9 +29,9 @@ int main(){
 	selection--;	
 
 	//Calling the selected function from the operationptr
-	int result = (*(*operationptr+selection))();
+	//int result = (*(*operationptr+selection))();
 	
-	printf("The result of the operation is: %d\n",result);
+	printf("The result of the operation is: %d\n",selection);
 	
 	return 0;
 
