@@ -25,7 +25,7 @@ int main(){
 	
 	printf("Choose your operation:\n-For Addition Press 1\n-For Subtraction Press 2\n-For Multiplication Press 3\n-For Division Press 4\n-For Modulo Press 5\n");
 	int selection;
-	scanf("%d\n",&selection);
+	scanf("%d",&selection);
 	selection--;	
 
 	//Calling the selected function from the operationptr
