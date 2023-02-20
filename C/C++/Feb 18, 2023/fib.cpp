@@ -5,6 +5,7 @@
 
 #include <iostream>
 
+//  Fibonccai class
 class Fibonacci{
 
     public:
