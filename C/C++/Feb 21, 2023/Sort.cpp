@@ -47,6 +47,48 @@ class Sort{
         }
     }
 
+    void mergeSortHelper(int arr[], int temp[], int start, int end) {
+		if(start >= end)
+			return;
+		int middle = (start+end)/2;
+		mergeSortHelper(arr,temp,start,middle);
+		mergeSortHelper(arr,temp,middle+1,end);
+		merge(arr,temp,start,middle,middle+1,end);
+	}
+
+    void merge(int arr[], int temp[], int leftStart, int leftEnd, int rightStart, int rightEnd) {
+		int i = leftStart;
+		int k = leftStart;
+		int j = rightStart;
+
+		while(i <= leftEnd && j <= rightEnd) {
+			if(arr[i] <= arr[j]) {
+				temp[k] = arr[i];
+				i++;
+			} else {
+				temp[k] = arr[j];
+				j++;
+			}
+			k++;
+		}
+
+		while(i <= leftEnd) {
+			temp[k] = arr[i];
+			i++;
+			k++;
+		}
+		while(j <= rightEnd) {
+			temp[k] = arr[j];
+			j++;
+			k++;
+		}
+
+		for(int index = leftStart; index <= rightEnd; index++) {
+			arr[index] = temp[index];
+		}
+
+	}
+
 
 
 
@@ -90,7 +132,8 @@ class Sort{
     }
 
     void merge_sort(int arr[], int n){
-
+        int temp[n];
+		mergeSortHelper(arr,temp,0,n-1);
     }
 
     void quick_sort(int arr[], int n){
@@ -98,7 +141,22 @@ class Sort{
     }
 
     void shell_sort(int arr[], int n){
-
+        int incr = 1;
+		while(2*incr <= n) {
+			incr = incr*2;
+		}
+		incr = incr-1;
+		while(incr >= 1) {
+			for(int i = incr; i < n; i++) {
+				int toInsert = arr[i];
+				int j = 0; 
+				for(j = i; j > incr - 1 && toInsert < arr[j-incr]; j = j -incr) {
+					arr[j] = arr[j-incr];
+				}
+				arr[j] = toInsert;
+			}
+			incr = incr/2;
+		}
     }
 
     void print_array(int arr[], int n){
@@ -152,6 +210,19 @@ int main(){
     mySort->quick_sort(my_arr,10);
     mySort->print_array(my_arr,10);
 
+
+    std::cout<<"\nMerge Sort:\n";
+    mySort->create_arr(my_arr);
+    mySort->print_array(my_arr,10);
+    mySort->merge_sort(my_arr,10);
+    mySort->print_array(my_arr,10);
+
+
+    std::cout<<"\nShell Sort:\n";
+    mySort->create_arr(my_arr);
+    mySort->print_array(my_arr,10);
+    mySort->shell_sort(my_arr,10);
+    mySort->print_array(my_arr,10);
 
     return 0;
 }
