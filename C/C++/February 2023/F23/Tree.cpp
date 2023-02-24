@@ -1,6 +1,6 @@
 //  Author: Rohan Singh
 //  February 23, 2023
-//  Code for a Tree in C++
+//  Code for a Binary Search Tree in C++
 
 #include <iostream>
 
@@ -35,6 +35,36 @@ class Tree{
 
     Node *root;
     int num;
+
+    //Helper functions for recrussive traversal
+
+    void preorder_helper(Node* curr){
+        if(curr==NULL)
+            return;
+        std::cout<<curr->key<<" : "<<curr->val<<"\n";
+        preorder_helper(curr->left_child);
+        preorder_helper(curr->right_child);
+    }
+
+
+    void inorder_helper(Node* curr){
+        if(curr==NULL)
+            return;
+        inorder_helper(curr->left_child);
+        std::cout<<curr->key<<" : "<<curr->val<<"\n";
+        inorder_helper(curr->right_child);
+    }
+
+    void postorder_helper(Node* curr){
+        if(curr==NULL)
+            return;
+        postorder_helper(curr->left_child);
+        postorder_helper(curr->right_child);
+        std::cout<<curr->key<<" : "<<curr->val<<"\n";
+    }
+
+
+
 
 
     public:
@@ -96,6 +126,27 @@ class Tree{
     }
 
 
+    void inorder(){
+        std::cout<<"Inorder Traversal:- \n";
+        std::cout<<"Key : Value\n";
+        inorder_helper(this->root);
+        std::cout<<"\n\n";
+    }
+
+    void preorder(){
+        std::cout<<"Preorder Traversal:- \n";
+        std::cout<<"Key : Value\n";
+        preorder_helper(this->root);
+        std::cout<<"\n\n";
+    }
+
+    void postorder(){
+        std::cout<<"Postorder Traversal:- \n";
+        std::cout<<"Key : Value\n";
+        postorder_helper(this->root);
+        std::cout<<"\n\n";
+    }
+
 
 };
 
@@ -118,6 +169,10 @@ int main(){
     std::cout<<"Key 8:- "<<demo->search(8)<<"\n";
     std::cout<<"Key 61:- "<<demo->search(61)<<"\n";
 
+    //Traversal Demonstration
+    demo->preorder();
+    demo->postorder();
+    demo->inorder();
 
     return 0;
 }
