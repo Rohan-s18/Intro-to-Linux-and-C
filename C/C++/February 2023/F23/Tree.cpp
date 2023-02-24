@@ -125,7 +125,7 @@ class Tree{
         return "No Node with that key!";
     }
 
-
+    //  Inorder traversal method
     void inorder(){
         std::cout<<"Inorder Traversal:- \n";
         std::cout<<"Key : Value\n";
@@ -133,6 +133,7 @@ class Tree{
         std::cout<<"\n\n";
     }
 
+    //  Preorder traversal method
     void preorder(){
         std::cout<<"Preorder Traversal:- \n";
         std::cout<<"Key : Value\n";
@@ -140,11 +141,52 @@ class Tree{
         std::cout<<"\n\n";
     }
 
+    //  Postorder travresal method
     void postorder(){
         std::cout<<"Postorder Traversal:- \n";
         std::cout<<"Key : Value\n";
         postorder_helper(this->root);
         std::cout<<"\n\n";
+    }
+
+    //  Remove Method
+    string remove(int x){
+        Node* trav = this->root;
+        string toRemove = "Node doesn't exist";
+        Node* parent;
+
+        while(trav != NULL){
+            if(x == trav->key){
+                //Deletion Cases
+
+                //Case 1
+                if(trav->left_child == NULL && trav->right_child == NULL){
+                    toRemove = trav->val;
+                    if(parent->left_child->key == x){
+                        parent->left_child == NULL;
+                    } 
+                    else{
+                        parent->right_child == NULL;
+                    }
+                }
+                //Case 2
+                else if(true){
+
+                }
+                //Case 3
+                else{
+
+                }
+
+            }
+            else if(x < trav->key)
+                trav = trav->left_child;
+            else
+                trav = trav->right_child;
+            parent = trav;
+        }
+
+        return toRemove;
     }
 
 
