@@ -152,7 +152,7 @@ class Tree{
     //  Remove Method
     string remove(int x){
         Node* trav = this->root;
-        string toRemove = "Node doesn't exist";
+        string toRemove = "Node doesn't exist!";
         Node* parent;
 
         while(trav != NULL){
@@ -163,18 +163,45 @@ class Tree{
                 if(trav->left_child == NULL && trav->right_child == NULL){
                     toRemove = trav->val;
                     if(parent->left_child->key == x){
-                        parent->left_child == NULL;
+                        parent->left_child = NULL;
                     } 
                     else{
-                        parent->right_child == NULL;
+                        parent->right_child = NULL;
                     }
                 }
                 //Case 2
-                else if(true){
-
+                else if(trav->left_child == NULL || trav->right_child == NULL){
+                    toRemove = trav->val;
+                    if(parent->left_child->key == x){
+                        if(trav->left_child != NULL)
+                            parent->left_child = trav->left_child;
+                        else
+                            parent->left_child = trav->right_child;
+                    } 
+                    else{
+                        if(trav->left_child != NULL)
+                            parent->right_child = trav->left_child;
+                        else
+                            parent->right_child = trav->right_child;
+                    }
                 }
                 //Case 3
                 else{
+                    toRemove = trav->val;
+                    Node* replacement = trav;
+                    while(replacement->right_child != NULL){
+                        replacement = replacement->right_child;
+                    }
+                    Node* replacement_copy = replacement;
+                    remove(replacement->key);
+                    if(parent->left_child->key == x){
+                        parent->left_child->key = replacement_copy->key;
+                        parent->left_child->val = replacement_copy->val;
+                    }
+                    else{
+                        parent->right_child->key = replacement_copy->key;
+                        parent->right_child->val = replacement_copy->val;
+                    }
 
                 }
 
@@ -199,6 +226,7 @@ int main(){
 
     //Add demonstration
     demo->add(6,"F");
+    demo->add(4,"D");
     demo->add(3,"C");
     demo->add(1,"A");
     demo->add(2,"B");
@@ -214,6 +242,13 @@ int main(){
     //Traversal Demonstration
     demo->preorder();
     demo->postorder();
+    demo->inorder();
+
+    //Remove Demonstration
+    demo->remove(1);
+    demo->remove(7);
+    demo->remove(4);
+
     demo->inorder();
 
     return 0;
