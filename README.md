@@ -15,7 +15,7 @@ This folder contains:
 
 
 ## C  
-This directory contains multiple modules for the C Programming language. These modules range from absolute rookie mode with no C programming experience to advanced code in C.  
+This directory contains multiple modules for the C Programming language. These modules range from absolute rookie mode with no C programming experience to advanced code in C. This directory also contains C++ code.
 
 This directory contains the following modules:    
   - **Kernighan Ritchie:** Basic C programs are from Kernighan, Ritchie's *Intro to C programming language*. http://cslabcms.nju.edu.cn/problem_solving/images/c/cc/The_C_Programming_Language_%282nd_Edition_Ritchie_Kernighan%29.pdf  
