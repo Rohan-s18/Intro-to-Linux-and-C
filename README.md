@@ -2,7 +2,7 @@
 
 ## Author: **Rohan Singh** 
 
-This repository is divided into three main components, each with a different purpose, depending on what you want to do. All of these directories have their respective mddules that range from absolute rookies to experienced veteran. This can be helpful if you are in an OS, Scripting, Embedded Design or Compilers class, or maybe you just want some prep for an interview.  
+This repository is divided into 3 main components, each with a different purpose, depending on what you want to do. All of these directories have their respective mddules that range from absolute rookies to experienced veteran. This can be helpful if you are in an OS, Scripting, Embedded Design or Compilers class, or maybe you just want some prep for an interview.  
 
 ## Linux  
 Contains a collection of Linux commands and what they do and how to use the Linux shell. These commands are in sheets ranging in different levels of difficulty.  
